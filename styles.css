@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Prata&display=swap');
+
+* {
+   margin: 0;
+   padding: 0; 
+   border: 0px;
+   list-style: none;
+   text-decoration: none;
+}
+
+p , a{
+    font-size: 1.1em;
+    line-height: 25px;
+    font-family: 'Inter';
+    color: #979797;
+}
+
+h1{
+    font-size: 2.5em;
+    font-family: 'Prata';
+    color: hsl(0,100%,100%);
+}
+
+button{
+    transition: 1s;
+    color: black;
+    font-family: 'Prata';
+    font-size: 1.1em;
+    background-color: #fbe850;
+    padding: 15px 20px 15px 20px;
+    width: fit-content;
+}
+
+
+.root , html , body{
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background-color: #0a0a0b;
+}
+
+.root_inner{
+    padding-top: 40px;
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+header.navBar{
+    padding: 0px 150px 0px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.navBar h1{
+    font-size: 1.1em;
+}
+
+header.navBar ul.links{
+    display: flex;
+    gap: 30px;
+}
+
+ul.links button{
+    display: none;
+}
+
+
+section.companies{
+    padding: 0px 150px 0px 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+section.companies div.description{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section.companies .logos{
+    display: flex;
+    justify-content: space-between;
+}
+
+section.companies div.companies {
+    display: flex;
+    justify-content: space-between;    
+}
+
+section.companies div.companies div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section.companies div.companies div div{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section.section2 {
+    background-color: #2e3038;
+    padding: 70px 150px 70px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.section2 div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section.section2 h1 {
+    font-size: 2em;
+}
+
+section.intrest {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 150px;
+}
+
+footer {
+    background-color: #2e3038;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 150px 25px 150px;
+}
+
+footer h1 {
+    font-size: 1em;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 20px;
+}
+
+#hamburger {
+    display: none;
+}
+
+span.br::before{
+    content: "\a";
+    white-space: pre;
+}
+
+
+@media screen and (min-width : 1300px) {
+    li#twitter svg:hover > path, li#linkedin svg:hover > path{
+        transition: 1s;
+        fill: hsl(203, 89%, 53%);
+        cursor: pointer;
+    }
+    
+    li#github svg:hover > path{
+        transition: 1s;
+        fill: #0a0a0b;
+        cursor: pointer;
+    }
+    
+    header.navBar ul.links li a:hover{
+        transition: 1s;
+        color: white;
+        border-bottom: 1px solid white;
+    
+    }
+    
+    button:hover {
+        background-color: #0a0a0b;
+        color: white;
+    }
+}
+
+@media screen and (max-width : 1023px) {
+    
+    span.br::before{
+        content: "";
+    }
+    
+    p , a{
+        font-size: 0.9em;
+        line-height: 25px;
+        font-family: 'Inter';
+        color: #979797;
+    }
+    
+    h1{
+        font-size: 1.8em;
+        font-family: 'Prata';
+        color: hsl(0,100%,100%);
+    }
+    
+    button{
+        transition: 1s;
+        color: black;
+        font-family: 'Prata';
+        font-size: 1em;
+        background-color: #fbe850;
+        padding: 15px 20px 15px 20px;
+        width: max-content;
+    }
+
+    .root_inner{
+        gap: 80px;
+    }
+
+    header.navBar{
+        padding: 0px 20px 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    header.navBar h1{
+        font-size: 1.1em;
+    }
+
+    #hamburger {
+        display: block;
+        position: relative;
+        z-index: 1000;
+    }
+    
+    header.navBar ul.links{
+        padding-top: 20vh;
+        height: 100vh;
+        width: 80vw;
+        position: absolute;
+        top : 0;
+        left: 20%;
+        background-color: #2e3038;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    header.navBar button{
+        display: none;
+    }
+    
+    section.companies{
+        padding: 0px 20px 0px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+    
+    section.companies div.description{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    section.companies .logos{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    
+    section.companies div.companies {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    section.companies div.companies div{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    section.companies div.companies div div{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    section.section2 {
+        background-color: #2e3038;
+        padding: 70px 20px 70px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    
+    section.section2 div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    section.section2 h1 {
+        font-size: 1.6em;
+    }
+    
+    section.intrest {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 20px;
+    }
+
+    section.intrest h1 {
+        font-size: 1.5em;
+    }
+    
+    footer {
+        background-color: #2e3038;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 20px 25px 20px;
+    }
+    
+    footer h1 {
+        font-size: 1em;
+    }
+    
+    footer .social-media {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+
+@media screen and (min-width : 1024px) and (max-width : 1199px) {
+
+    p , a{
+        font-size: 0.9em;
+        line-height: 25px;
+        font-family: 'Inter';
+        color: #979797;
+    }
+    
+    h1{
+        font-size: 2em;
+        font-family: 'Prata';
+        color: hsl(0,100%,100%);
+    }
+    
+    button{
+        transition: 1s;
+        color: black;
+        font-family: 'Prata';
+        font-size: 0.9em;
+        background-color: #fbe850;
+        padding: 15px 20px 15px 20px;
+        width: fit-content;
+    }
+
+    img{
+        max-width: 400px;
+    }
+    
+    .root , html , body{
+        width: 100vw;
+        min-height: 100vh;
+        height: auto;
+        background-color: #0a0a0b;
+    }
+    
+    .root_inner{
+        padding-top: 40px;
+        width: 100vw;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    
+    header.navBar{
+        padding: 0px 50px 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    header.navBar h1{
+        font-size: 1.1em;
+    }
+    
+    header.navBar ul.links{
+        display: flex;
+        gap: 30px;
+    }
+    
+    ul.links button{
+        display: none;
+    }
+    
+    section.companies{
+        padding: 0px 50px 0px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    
+    section.companies div.description{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    section.companies .logos{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    section.companies div.companies {
+        display: flex;
+        justify-content: space-between;    
+    }
+    
+    section.companies div.companies div{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    section.companies div.companies div div{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    section.section2 {
+        background-color: #2e3038;
+        padding: 70px 50px 70px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    section.section2 div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    section.section2 h1 {
+        font-size: 2em;
+    }
+    
+    section.intrest {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 50px;
+    }
+    
+    footer {
+        background-color: #2e3038;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px 25px 50px;
+    }
+    
+    footer h1 {
+        font-size: 1em;
+    }
+    
+    footer .social-media {
+        display: flex;
+        gap: 20px;
+    }
+    
+    li#twitter svg:hover > path, li#linkedin svg:hover > path{
+        fill: hsl(203, 89%, 53%);
+        cursor: pointer;
+    }
+    
+    li#github svg:hover > path{
+        fill: #0a0a0b;
+        cursor: pointer;
+    }
+    
+    #hamburger {
+        display: none;
+    }
+    
+    span.br::before{
+        content: "\a";
+        white-space: pre;
+    }    
+}
